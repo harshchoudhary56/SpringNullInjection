@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           https://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           https://www.springframework.org/schema/context/spring-context.xsd">
+      
+     <bean id="dobObj" class="java.util.Date">
+     	<property name="year" value="93"/>
+     	<property name="month" value="0"/>
+     	<property name="date" value="03"/>
+     </bean>                 
+     
+     <bean id="pinfo" class="in.ineuron.comp.PersonalInfo">
+     	<constructor-arg name="pid" value="10"/>
+     	<constructor-arg name="pname" value="sachin"/>
+     	<constructor-arg name="paddress" value="MI"/>
+     	<constructor-arg name="dom"><null/></constructor-arg>
+     	<constructor-arg name="doj"><null/></constructor-arg>
+     	<constructor-arg name="dob" ref="dobObj"/>
+     </bean>
+</beans>
